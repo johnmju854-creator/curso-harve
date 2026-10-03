@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transação</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    main {
+      width: min(90%, 28rem);
+    }
+
+    h1,
+    form p {
+      text-align: center;
+    }
+
+    form p {
+      margin: 1rem 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    input,
+    select,
+    textarea {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Transação</h1>
+    <form>
+      <p>
+        <label for="tipo">Tipo</label>
+        <select id="tipo" name="tipo">
+          <option value="entrada">Entrada</option>
+          <option value="saida">Saída</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descricao"></textarea>
+      </p>
+
+      <p>
+        <label for="data">Data</label>
+        <input type="date" id="data" name="data">
+      </p>
+
+      <p>
+        <label for="valor">Valor</label>
+        <input type="number" id="valor" name="valor" step="any">
+      </p>
+
+      <p>
+        <button type="submit">Salvar</button>
+      </p>
+    </form>
+  </main>
+</body>
+</html>
